@@ -3,16 +3,18 @@
 namespace JustinByrne\ABunchOfLivewireComponents;
 
 use Illuminate\Support\ServiceProvider;
+use JustinByrne\ABunchOfLivewireComponents\Livewire\Autocomplete;
+use Livewire\Livewire;
 
 class ABunchOfLivewireComponents extends ServiceProvider
 {
-    private $config = 'a-bunch-of-livewire-components';
+    private $slug = 'a-bunch-of-livewire-components';
     
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/'.$this->config.'.php',
-            $this->config
+            __DIR__.'/../config/'.$this->slug.'.php',
+            $this->slug
         );
     }
 
@@ -30,17 +32,17 @@ class ABunchOfLivewireComponents extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__.'/../config/'.$this->config.'.php' => config_path($this->config.'.php'),
+            __DIR__.'/../config/'.$this->slug.'.php' => config_path($this->slug.'.php'),
         ], 'config');
     }
 
     protected function offerLivewireComponents()
     {
-        //
+        Livewire::component('abulc-autocomplete', Autocomplete::class);
     }
 
     protected function loadViews()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'a-bunch-of-livewire-components');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', $this->slug);
     }
 }
