@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use JustinByrne\ABunchOfLivewireComponents\Livewire\Autocomplete;
 use Livewire\Livewire;
 
-class ABunchOfLivewireComponents extends ServiceProvider
+class ABunchOfLivewireComponentsServiceProvider extends ServiceProvider
 {
     private $slug = 'a-bunch-of-livewire-components';
     

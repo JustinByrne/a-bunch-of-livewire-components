@@ -19,5 +19,12 @@
         "psr-4": {
             "JustinByrne\\ABunchOfLivewireComponents\\": "src"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JustinByrne\\ABunchOfLivewireComponents\\ABunchOfLivewireComponentsServiceProvider"
+            ]
+        }
     }
 }
