@@ -21,6 +21,8 @@ class ABunchOfLivewireComponentsServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->offerPublishing();
+
+        $this->loadViews();
         
         $this->offerLivewireComponents();
     }
@@ -36,13 +38,13 @@ class ABunchOfLivewireComponentsServiceProvider extends ServiceProvider
         ], 'config');
     }
 
-    protected function offerLivewireComponents()
-    {
-        Livewire::component('abulc-autocomplete', Autocomplete::class);
-    }
-
     protected function loadViews()
     {
         $this->loadViewsFrom(__DIR__.'/../resources/views', $this->slug);
+    }
+
+    protected function offerLivewireComponents()
+    {
+        Livewire::component('abulc-autocomplete', Autocomplete::class);
     }
 }
