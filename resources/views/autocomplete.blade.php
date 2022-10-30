@@ -24,7 +24,10 @@
     class="relative"
 >
 
-    <label for="{{ strtolower(str_replace(' ', '_', $label)) }}_autocomplete"> {{ $label }} </label>
+    <label
+        for="{{ strtolower(str_replace(' ', '_', $label)) }}_autocomplete"
+        class="{{ config('a-bunch-of-livewire-components.autocomplete.classes.label') }}"
+    > {{ $label }} </label>
     <input
         type="text"
         id="{{ strtolower(str_replace(' ', '_', $label)) }}_autocomplete"
