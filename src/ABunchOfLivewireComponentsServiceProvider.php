@@ -9,7 +9,7 @@ use Livewire\Livewire;
 class ABunchOfLivewireComponentsServiceProvider extends ServiceProvider
 {
     private $slug = 'a-bunch-of-livewire-components';
-    
+
     public function register()
     {
         $this->mergeConfigFrom(
@@ -23,10 +23,10 @@ class ABunchOfLivewireComponentsServiceProvider extends ServiceProvider
         $this->offerPublishing();
 
         $this->loadViews();
-        
+
         $this->offerLivewireComponents();
     }
-    
+
     protected function offerPublishing()
     {
         if (! function_exists('config_path')) {

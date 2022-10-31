@@ -21,7 +21,7 @@ class Autocomplete extends Component
     public string $search = '';
 
     public $selected_value;
-    
+
     public function render()
     {
         return view('a-bunch-of-livewire-components::autocomplete', [
@@ -32,7 +32,7 @@ class Autocomplete extends Component
     public function selectItem($item, $value)
     {
         $this->search = $item;
-        
+
         $this->selected_value = $value;
     }
 
