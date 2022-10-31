@@ -45,6 +45,6 @@ class ABunchOfLivewireComponentsServiceProvider extends ServiceProvider
 
     protected function offerLivewireComponents()
     {
-        Livewire::component('abulc-autocomplete', Autocomplete::class);
+        Livewire::component('abolc-autocomplete', Autocomplete::class);
     }
 }

@@ -47,7 +47,7 @@ module.exports = {
 <img src="https://raw.githubusercontent.com/JustinByrne/resources/main/a-bunch-of-livewire-components/autocomplete.jpg" style="width: 100%;" />
 
 ```php
-@livewire('abulc-autocomplete', ['model' => 'App\Models\User'])
+@livewire('abolc-autocomplete', ['model' => 'App\Models\User'])
 ```
 
 | parameter | Value type                                     | default  |
