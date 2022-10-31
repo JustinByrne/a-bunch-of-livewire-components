@@ -39,6 +39,8 @@ module.exports = {
 
 ### Autocomplete
 
+![Autocomplete in both dark and light mode](https://raw.githubusercontent.com/JustinByrne/resources/main/a-bunch-of-livewire-components/autocomplete.jpg)
+
 ```php
 @livewire('abulc-autocomplete', ['model' => 'App\Models\User'])
 ```
