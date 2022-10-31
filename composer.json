@@ -13,18 +13,34 @@
         "livewire/livewire": "^2.10"
     },
     "require-dev": {
-        "orchestra/testbench": "^7.0"
+        "orchestra/testbench": "^7.0",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-laravel": "^1.1"
     },
     "autoload": {
         "psr-4": {
             "JustinByrne\\ABunchOfLivewireComponents\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "JustinByrne\\ABunchOfLivewireComponents\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage"
+    },
     "extra": {
         "laravel": {
             "providers": [
                 "JustinByrne\\ABunchOfLivewireComponents\\ABunchOfLivewireComponentsServiceProvider"
             ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
         }
     }
 }
